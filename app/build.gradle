@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'jar-gradle-plugin'
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
 
     defaultConfig {
         applicationId "com.adison.testjarplugin"
@@ -22,8 +22,8 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.android.support:design:24.0.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
 }
 
 
@@ -41,10 +41,12 @@ BuildJar{
     applyMappingFile="originMapping/mapping.txt"
     //需要输出jar的包名列表,当此参数为空时，则默认全项目输出,支持多包,如 includePackage=['com/adison/testjarplugin/include','com/adison/testjarplugin/include1'...]
     includePackage=['com/adison/testjarplugin/include']
+    //需要输出jar的类名列表
+    includeClass=['com/adison/testjarplugin/include/TestInclude.class']
     //不需要输出jar的jar包列表,如['baidu.jar','baidu1.jar'...]
     excludeJar=[]
     //不需要输出jar的类名列表,如['baidu.calss','baidu1.class'...]
-    excludeClass=['com/adison/testjarplugin/TestExcude.class']
+    excludeClass=['com/adison/testjarplugin/exclude/TestExcude.class']
     //不需要输出jar的包名列表,如 excludePackage=['com/adison/testjarplugin/exclude','com/adison/testjarplugin/exclude1'...]
-    excludePackage=['com/adison/testjarplugin/exclude']
+    excludePackage=['android/support/v7']
 }
