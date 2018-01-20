@@ -5,12 +5,14 @@ buildscript {
         google()
         jcenter()
         mavenCentral()
+//        maven {
+//            url uri('./repo')
+//        }
 
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
-//        classpath 'com.adison.gradleplugin:jar:1.0.1'
-        classpath 'com.adison.gradleplugin:jar:1.0.3'
+        classpath 'com.adison.gradleplugin:jar:1.1.0'
     }
 }
 
@@ -19,6 +21,9 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
+//        maven {
+//            url uri('./repo')
+//        }
     }
 }
 

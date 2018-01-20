@@ -38,16 +38,16 @@ BuildJar{
 //    混淆配置
     proguardConfigFile="proguard-rules.pro"
 //    是否需要默认的混淆配置proguard-android.txt
-    needDefaultProguard=false
+    needDefaultProguard=true
     applyMappingFile="originMapping/mapping.txt"
     //需要输出jar的包名列表,当includePackage&includeClass为空时，则默认全项目输出,支持多包,如 includePackage=['com/adison/testjarplugin/include','com/adison/testjarplugin/include1'...]
     includePackage=['com/adison/testjarplugin/include']
-    //需要输出jar的类名列表
+//    //需要输出jar的类名列表
 //    includeClass=['com/adison/testjarplugin/include/TestInclude.class']
-    //不需要输出jar的jar包列表,如['baidu.jar','baidu1.jar'...]
-    excludeJar=[]
-    //不需要输出jar的类名列表,如['baidu.calss','baidu1.class'...]
+//    //不需要输出jar的jar包列表,如['baidu.jar','baidu1.jar'...]
+//    excludeJar=[]
+//    //不需要输出jar的类名列表,如['baidu.calss','baidu1.class'...]
 //    excludeClass=['com/adison/testjarplugin/TestExcude.class']
-    //不需要输出jar的包名列表,如 excludePackage=['com/adison/testjarplugin/exclude','com/adison/testjarplugin/exclude1'...]
-//    excludePackage=['com/adison/testjarplugin/exclude','android/support']
+//    //不需要输出jar的包名列表,如 excludePackage=['com/adison/testjarplugin/exclude','com/adison/testjarplugin/exclude1'...]
+//    excludePackage=['com/adison/testjarplugin/exclude/**','android/support/**']
 }
